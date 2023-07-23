@@ -19,8 +19,11 @@ use super::parser::sdp_parser;
 use super::SdpError;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
+/// Session description
 pub struct Sdp {
+    /// Common session parameters
     pub session: Session,
+    /// List of media lines
     pub media_lines: Vec<MediaLine>,
 }
 

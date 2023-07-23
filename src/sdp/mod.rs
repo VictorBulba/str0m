@@ -8,7 +8,7 @@ use serde::{de, Deserialize, Deserializer, Serialize, Serializer};
 use thiserror::Error;
 
 mod data;
-pub(crate) use data::{FormatParam, Sdp, Session, SessionAttribute, Setup};
+pub(crate) use data::{FormatParam, Session, SessionAttribute, Setup};
 pub(crate) use data::{MediaAttribute, MediaLine, MediaType, Msid, Proto};
 pub(crate) use data::{Simulcast, SimulcastGroups, SimulcastOption};
 
@@ -16,6 +16,8 @@ pub(crate) use data::{Simulcast, SimulcastGroups, SimulcastOption};
 pub(crate) use data::RtpMap;
 
 mod parser;
+
+pub use data::Sdp;
 
 /// Errors from parsing and serializing SDP.
 #[derive(Debug, Error)]
