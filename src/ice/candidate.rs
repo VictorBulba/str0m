@@ -173,7 +173,7 @@ impl Candidate {
     /// Peer reflexive candidates are NAT:ed addresses discovered via STUN
     /// binding responses. `addr` is the discovered address. `base` is the local
     /// (host) address inside the NAT we used to get this response.
-    pub(crate) fn peer_reflexive(
+    pub fn peer_reflexive(
         addr: SocketAddr,
         base: SocketAddr,
         prio: u32,
@@ -297,7 +297,8 @@ impl Candidate {
         self.component_id
     }
 
-    pub(crate) fn addr(&self) -> SocketAddr {
+    /// The actual address to use. This might be a host address, server reflex, relay etc.
+    pub fn addr(&self) -> SocketAddr {
         self.addr
     }
 

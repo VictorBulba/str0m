@@ -499,7 +499,8 @@ mod io;
 mod packet;
 mod rtp;
 mod sctp;
-mod sdp;
+
+pub mod sdp;
 
 pub mod format;
 

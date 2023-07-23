@@ -1,3 +1,5 @@
+//! Session description protocol
+
 use std::fmt;
 use std::ops::Deref;
 
